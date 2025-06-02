@@ -29,9 +29,9 @@ information.**
 
 <div style="text-align: center;">
 
- ![Movie Search](screenshots/movie_search.png) | ![Movie Details](screenshots/movie_details.png) 
-:---------------------------------------------:|:-----------------------------------------------:
-            **Movie Search Screen**            |            **Movie Details Screen**             
+| ![Movie Search](screenshots/movie_search.png) | ![Movie Details](screenshots/movie_details.png) |
+|:---------------------------------------------:|:-----------------------------------------------:|
+|            **Movie Search Screen**            |            **Movie Details Screen**             |
 
 </div>
 
@@ -83,14 +83,6 @@ The app follows **Clean Architecture** principles with a multi-module structure:
 | ![Retrofit](https://img.shields.io/badge/Retrofit-48B983?style=flat&logo=retrofit&logoColor=white)             | 2.11.0  | HTTP client             |
 | ![OkHttp](https://img.shields.io/badge/OkHttp-48B983?style=flat&logo=okhttp&logoColor=white)                   | 4.12.0  | Network request logging |
 | ![Kotlinx](https://img.shields.io/badge/Kotlinx%20Serialization-7F52FF?style=flat&logo=kotlin&logoColor=white) | 1.8.1   | JSON serialization      |
-
-### 🧪 Testing
-
-| Library                                                                                                       | Version | Description            |
-|---------------------------------------------------------------------------------------------------------------|---------|------------------------|
-| ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=flat&logo=junit5&logoColor=white)                    | 4.13.2  | Unit testing framework |
-| ![AndroidX Test](https://img.shields.io/badge/AndroidX%20Test-3DDC84?style=flat&logo=android&logoColor=white) | 1.2.1   | Android testing        |
-| ![Espresso](https://img.shields.io/badge/Espresso-3DDC84?style=flat&logo=android&logoColor=white)             | 3.6.1   | UI testing             |
 
 ## 📋 Requirements
 
