@@ -47,6 +47,11 @@ dependencies {
     implementation(project(":feature:movie:ui"))
     implementation(project(":feature:movie:data"))
     implementation(project(":feature:movie:domain"))
+
+    implementation(project(":feature:movie_details:ui"))
+    implementation(project(":feature:movie_details:data"))
+    implementation(project(":feature:movie_details:domain"))
+
     implementation(project(":core:common"))
     implementation(project(":core:feature_api"))
     implementation(project(":core:network"))
@@ -73,6 +78,10 @@ dependencies {
     implementation(libs.dagger.android.support)
     kapt(libs.dagger.android.processor)
     kapt(libs.dagger.compiler)
+
+    //Assisted Inject dependencies
+    implementation(libs.assisted.inject.annotations.dagger2)
+    kapt(libs.assisted.inject.processor.dagger2)
 
     implementation(libs.androidx.navigation.compose)
 

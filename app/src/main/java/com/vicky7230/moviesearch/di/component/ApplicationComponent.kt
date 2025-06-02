@@ -6,6 +6,8 @@ import com.core.network.di.NetworkModule
 import com.feature.movie.data.di.DataLayerModule
 import com.feature.movie.domain.di.DomainLayerModule
 import com.feature.movie.ui.di.UiModule
+import com.feature.movie_details.data.di.DataModule
+import com.feature.movie_details.ui.di.MovieDetailsUiModule
 import com.vicky7230.moviesearch.BaseApplication
 import com.vicky7230.moviesearch.di.module.ActivityBindingModule
 import com.vicky7230.moviesearch.di.module.AppModule
@@ -21,9 +23,10 @@ import javax.inject.Singleton
         AndroidSupportInjectionModule::class,
         NetworkModule::class,
         DataLayerModule::class,
+        DataModule::class,
         DomainLayerModule::class,
         UiModule::class,
-        //BindingModule::class,
+        MovieDetailsUiModule::class,
         AppModule::class,
         ActivityBindingModule::class,
         ViewModelModule::class

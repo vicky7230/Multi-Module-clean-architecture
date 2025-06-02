@@ -1,6 +1,7 @@
 package com.feature.movie.ui.screen
 
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -27,17 +28,19 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
+import com.core.common.navigation_constants.MovieDetailsFeature
 
 
 @Composable
 fun MovieScreen(
     modifier: Modifier = Modifier,
-    movieSearchViewModel: MovieSearchViewModel
+    movieSearchViewModel: MovieSearchViewModel,
+    navController: NavHostController,
 ) {
     val uiState by movieSearchViewModel.movieSearchUiState.collectAsStateWithLifecycle()
     val query by movieSearchViewModel.query.collectAsStateWithLifecycle()
@@ -69,7 +72,7 @@ fun MovieScreen(
                         .fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(text = (uiState as MovieSearchUiState.Error).message)
+                    Text(text = state.message)
                 }
             }
 
@@ -107,6 +110,9 @@ fun MovieScreen(
                                     .border(width = 1.dp, color = Color.White)
                             ) {
                                 AsyncImage(
+                                    modifier = Modifier.clickable {
+                                        navController.navigate("movie_details/${it.id}")
+                                    },
                                     model = ImageRequest.Builder(LocalContext.current)
                                         .data(it.imageUrl)
                                         .build(),

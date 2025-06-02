@@ -5,6 +5,9 @@ import com.feature.movie.domain.model.Movie
 
 fun MovieListResponse.toDomainMovieList(): List<Movie> {
     return this.results.map {
-        Movie(imageUrl = "https://image.tmdb.org/t/p/w500${it.poster_path ?: ""}")
+        Movie(
+            id = it.id,
+            imageUrl = "https://image.tmdb.org/t/p/w500${it.poster_path ?: ""}"
+        )
     }
 }

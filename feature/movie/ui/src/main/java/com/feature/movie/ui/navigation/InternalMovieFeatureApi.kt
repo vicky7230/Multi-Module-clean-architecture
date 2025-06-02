@@ -26,7 +26,7 @@ internal object InternalMovieFeatureApi : FeatureApi {
                     viewModelStoreOwner = navBackStackEntry,
                     factory = viewModelFactory
                 )
-                MovieScreen(movieSearchViewModel = movieSearchViewModel)
+                MovieScreen(movieSearchViewModel = movieSearchViewModel, navController = navController)
             }
         }
     }
